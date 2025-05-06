@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colonist Card Counter</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card-counter {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .resource-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .resource {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .resource-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    .wood { background-color: #663300; }
+    .brick { background-color: #CC3300; }
+    .sheep { background-color: #99CC00; }
+    .wheat { background-color: #FFCC00; }
+    .ore { background-color: #999999; }
+    .dev-card { background-color: #6600CC; }
+    .count {
+      font-weight: bold;
+    }
+    .progress-bar {
+      height: 5px;
+      background-color: #e0e0e0;
+      border-radius: 2px;
+      margin-top: 2px;
+    }
+    .progress {
+      height: 100%;
+      border-radius: 2px;
+    }
+    .total-count {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .status {
+      text-align: center;
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 3px;
+      background-color: #f0f0f0;
+    }
+    .inactive {
+      color: #999;
+    }
+    .active {
+      color: #009900;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Colonist Card Counter</h2>
+    <div id="status" class="status inactive">Not connected to a game</div>
+    
+    <div class="card-counter">
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon wood"></div>
+          <span>Wood</span>
+        </div>
+        <span class="count" id="wood-count">0</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="wood-progress" style="width: 0%; background-color: #663300;"></div>
+      </div>
+      
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon brick"></div>
+          <span>Brick</span>
+        </div>
+        <span class="count" id="brick-count">0</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="brick-progress" style="width: 0%; background-color: #CC3300;"></div>
+      </div>
+      
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon sheep"></div>
+          <span>Sheep</span>
+        </div>
+        <span class="count" id="sheep-count">0</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="sheep-progress" style="width: 0%; background-color: #99CC00;"></div>
+      </div>
+      
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon wheat"></div>
+          <span>Wheat</span>
+        </div>
+        <span class="count" id="wheat-count">0</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="wheat-progress" style="width: 0%; background-color: #FFCC00;"></div>
+      </div>
+      
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon ore"></div>
+          <span>Ore</span>
+        </div>
+        <span class="count" id="ore-count">0</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="ore-progress" style="width: 0%; background-color: #999999;"></div>
+      </div>
+      
+      <div class="resource-row">
+        <div class="resource">
+          <div class="resource-icon dev-card"></div>
+          <span>Dev Cards</span>
+        </div>
+        <span class="count" id="dev-card-count">0</span>
+      </div>
+      
+      <div class="total-count">
+        Total Cards in Play: <span id="total-count">0</span>/95
+      </div>
+    </div>
+    
+    <button id="reset-btn">Reset Counter</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 

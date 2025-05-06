@@ -1,0 +1,19 @@
+To use this extension, you need to create or add three icon files in this directory:
+
+1. icon16.png (16x16 pixels)
+2. icon48.png (48x48 pixels)
+3. icon128.png (128x128 pixels)
+
+You can create these icons using any image editing software or online icon generators.
+
+The icons should represent your Colonist Card Counter extension.
+
+For a quick solution, you can use a simple colored square with "CC" text as the icon.
+
+-----
+
+If you have ImageMagick installed:
+- You can run the create_icons.sh script in this directory
+- Run: chmod +x create_icons.sh && ./create_icons.sh
+
+If you don't have icons ready, the extension will still work, but it will use Chrome's default extension icon. 
